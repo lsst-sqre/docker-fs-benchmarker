@@ -65,5 +65,7 @@ EOF
 generate_fio
 if [ -z "${DRY_RUN}" ]; then
     cd ${BENCHMARK_DIR}
-    fio ${fns}
+    for f in ${fns}; do
+	fio ${f}
+    done
 fi
