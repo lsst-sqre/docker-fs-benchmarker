@@ -1,0 +1,7 @@
+lsst_users:x:1363:athornto,athornton,krughoff,SimonKrughoff
+jovyan:x:768:athornto,athornton,krughoff,SimonKrughoff
+krughoff:x:35871:krughoff
+athornton:x:2453165:athornton
+athornto:x:53127:athornto
+SimonKrughoff:x:945715:SimonKrughoff
+

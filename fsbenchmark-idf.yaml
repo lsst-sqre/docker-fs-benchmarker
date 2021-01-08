@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+  name: fsbenchmark
+  namespace: nublado
+spec:
+  containers:
+  - image: lsstsqre/docker-fs-benchmark
+    command: [ "/bin/tail", "-f", "/dev/null" ]
+    securityContext:
+      runAsUser: 945715
+      runAsGroup: 768
+    name: fstester
+    volumeMounts:
+    - mountPath: /project
+      name: project
+  volumes:
+  - nfs:
+      path: /share1/project
+      server: 10.50.228.58
+    name: project
