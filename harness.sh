@@ -51,7 +51,7 @@ time_based
 runtime=300
 iodepth=16
 
-[file1]
+[file${i}]
 size=${s}
 ioengine=${e}
 rw=${t}
