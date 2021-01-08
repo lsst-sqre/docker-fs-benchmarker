@@ -66,6 +66,7 @@ generate_fio
 if [ -z "${DRY_RUN}" ]; then
     cd ${BENCHMARK_DIR}
     for f in ${fns}; do
+	echo "Running fio ${f}"
 	fio ${f}
     done
 fi
