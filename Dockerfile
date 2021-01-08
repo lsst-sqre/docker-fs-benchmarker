@@ -5,3 +5,5 @@ COPY pw.append /tmp
 COPY group.append /tmp
 RUN  cat /tmp/pw.append >> /etc/passwd && \
       cat /tmp/group.append >> /etc/group
+COPY harness.sh /usr/local/bin
+WORKDIR /tmp
