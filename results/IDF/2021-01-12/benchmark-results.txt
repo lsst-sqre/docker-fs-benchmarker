@@ -1,0 +1,880 @@
+Running fio /home/athornton/src/bench-2021-01-12/00-b4k-fio-read-posixaio-15K.fio
+file0: (g=0): rw=read, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file0: Laying out IO file (1 file / 0MiB)
+
+file0: (groupid=0, jobs=1): err= 0: pid=861: Tue Jan 12 17:38:09 2021
+  read: IOPS=6466, BW=25.3MiB/s (26.5MB/s)(14.8GiB/599074msec)
+    slat (nsec): min=73, max=3290.0k, avg=2474.37, stdev=4378.37
+    clat (usec): min=112, max=11047, avg=257.48, stdev=108.33
+     lat (usec): min=113, max=11053, avg=259.95, stdev=108.54
+    clat percentiles (usec):
+     |  1.00th=[  167],  5.00th=[  182], 10.00th=[  192], 20.00th=[  208],
+     | 30.00th=[  221], 40.00th=[  233], 50.00th=[  245], 60.00th=[  260],
+     | 70.00th=[  277], 80.00th=[  297], 90.00th=[  326], 95.00th=[  359],
+     | 99.00th=[  441], 99.50th=[  529], 99.90th=[ 1254], 99.95th=[ 1975],
+     | 99.99th=[ 4490]
+   bw (  KiB/s): min=18264, max=31512, per=99.87%, avg=25834.10, stdev=2104.30, samples=1199
+   iops        : min= 4566, max= 7878, avg=6458.52, stdev=526.08, samples=1199
+  lat (usec)   : 250=53.71%, 500=45.72%, 750=0.33%, 1000=0.10%
+  lat (msec)   : 2=0.10%, 4=0.04%, 10=0.01%, 20=0.01%
+  cpu          : usr=3.98%, sys=14.90%, ctx=4082118, majf=0, minf=22
+  IO depths    : 1=33.3%, 2=66.7%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=3874047,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=25.3MiB/s (26.5MB/s), 25.3MiB/s-25.3MiB/s (26.5MB/s-26.5MB/s), io=14.8GiB (15.9GB), run=599074-599074msec
+Running fio /home/athornton/src/bench-2021-01-12/01-b4k-fio-read-posixaio-150K.fio
+file1: (g=0): rw=read, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file1: Laying out IO file (1 file / 0MiB)
+
+file1: (groupid=0, jobs=1): err= 0: pid=871: Tue Jan 12 17:48:09 2021
+  read: IOPS=33.5k, BW=131MiB/s (137MB/s)(76.6GiB/599593msec)
+    slat (nsec): min=69, max=889377, avg=687.23, stdev=2457.93
+    clat (nsec): min=374, max=16808k, avg=358060.94, stdev=270301.44
+     lat (nsec): min=1360, max=16819k, avg=358748.17, stdev=270174.84
+    clat percentiles (usec):
+     |  1.00th=[    8],  5.00th=[   19], 10.00th=[   32], 20.00th=[  131],
+     | 30.00th=[  192], 40.00th=[  221], 50.00th=[  262], 60.00th=[  429],
+     | 70.00th=[  553], 80.00th=[  619], 90.00th=[  693], 95.00th=[  758],
+     | 99.00th=[  906], 99.50th=[  996], 99.90th=[ 1680], 99.95th=[ 2376],
+     | 99.99th=[ 5014]
+   bw (  KiB/s): min=94128, max=160136, per=99.96%, avg=133935.09, stdev=10167.18, samples=1199
+   iops        : min=23532, max=40034, avg=33483.77, stdev=2541.79, samples=1199
+  lat (nsec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (usec)   : 2=0.01%, 4=0.10%, 10=2.22%, 20=3.48%, 50=7.33%
+  lat (usec)   : 100=4.07%, 250=30.54%, 500=16.10%, 750=30.66%, 1000=4.99%
+  lat (msec)   : 2=0.43%, 4=0.05%, 10=0.01%, 20=0.01%
+  cpu          : usr=5.77%, sys=12.15%, ctx=3508765, majf=0, minf=23
+  IO depths    : 1=4.6%, 2=9.1%, 4=20.1%, 8=54.9%, 16=11.2%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=93.0%, 8=2.3%, 16=4.7%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=20084134,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=131MiB/s (137MB/s), 131MiB/s-131MiB/s (137MB/s-137MB/s), io=76.6GiB (82.3GB), run=599593-599593msec
+Running fio /home/athornton/src/bench-2021-01-12/02-b256k-fio-read-posixaio-15M.fio
+file2: (g=0): rw=read, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file2: Laying out IO file (1 file / 15MiB)
+
+file2: (groupid=0, jobs=1): err= 0: pid=881: Tue Jan 12 17:58:09 2021
+  read: IOPS=4578, BW=1145MiB/s (1200MB/s)(671GiB/600003msec)
+    slat (nsec): min=70, max=6827.5k, avg=672.46, stdev=8264.91
+    clat (usec): min=17, max=21128, avg=3442.11, stdev=1837.34
+     lat (usec): min=88, max=21129, avg=3442.78, stdev=1837.05
+    clat percentiles (usec):
+     |  1.00th=[ 1156],  5.00th=[ 1418], 10.00th=[ 1647], 20.00th=[ 1893],
+     | 30.00th=[ 2180], 40.00th=[ 2474], 50.00th=[ 2802], 60.00th=[ 3228],
+     | 70.00th=[ 4228], 80.00th=[ 5080], 90.00th=[ 6325], 95.00th=[ 7111],
+     | 99.00th=[ 8291], 99.50th=[ 8717], 99.90th=[10683], 99.95th=[11731],
+     | 99.99th=[14484]
+   bw (  MiB/s): min=  836, max= 1387, per=100.00%, avg=1145.05, stdev=63.54, samples=1199
+   iops        : min= 3344, max= 5550, avg=4580.14, stdev=254.14, samples=1199
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=0.01%
+  lat (usec)   : 750=0.12%, 1000=0.25%
+  lat (msec)   : 2=23.14%, 4=45.27%, 10=31.05%, 20=0.16%, 50=0.01%
+  cpu          : usr=1.23%, sys=17.17%, ctx=1055969, majf=0, minf=23
+  IO depths    : 1=0.1%, 2=2.8%, 4=6.6%, 8=54.8%, 16=35.8%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=94.9%, 8=1.0%, 16=4.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=2747237,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=1145MiB/s (1200MB/s), 1145MiB/s-1145MiB/s (1200MB/s-1200MB/s), io=671GiB (720GB), run=600003-600003msec
+Running fio /home/athornton/src/bench-2021-01-12/03-b4k-fio-read-posixaio-150M.fio
+file3: (g=0): rw=read, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file3: Laying out IO file (1 file / 150MiB)
+
+file3: (groupid=0, jobs=1): err= 0: pid=891: Tue Jan 12 18:08:10 2021
+  read: IOPS=247k, BW=965MiB/s (1012MB/s)(565GiB/600014msec)
+    slat (nsec): min=70, max=5772.8k, avg=513.72, stdev=3331.93
+    clat (nsec): min=267, max=23959k, avg=58437.21, stdev=425410.95
+     lat (nsec): min=1489, max=23959k, avg=58950.93, stdev=425420.52
+    clat percentiles (usec):
+     |  1.00th=[    7],  5.00th=[   10], 10.00th=[   16], 20.00th=[   21],
+     | 30.00th=[   24], 40.00th=[   26], 50.00th=[   30], 60.00th=[   34],
+     | 70.00th=[   40], 80.00th=[   47], 90.00th=[   62], 95.00th=[   82],
+     | 99.00th=[  225], 99.50th=[  449], 99.90th=[ 7308], 99.95th=[ 9765],
+     | 99.99th=[14353]
+   bw (  KiB/s): min=562568, max=1109016, per=100.00%, avg=988638.06, stdev=57774.26, samples=1199
+   iops        : min=140642, max=277254, avg=247159.53, stdev=14443.59, samples=1199
+  lat (nsec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (usec)   : 2=0.01%, 4=0.04%, 10=5.36%, 20=11.93%, 50=65.89%
+  lat (usec)   : 100=13.34%, 250=2.53%, 500=0.43%, 750=0.06%, 1000=0.04%
+  lat (msec)   : 2=0.09%, 4=0.05%, 10=0.17%, 20=0.05%, 50=0.01%
+  cpu          : usr=27.18%, sys=27.09%, ctx=11537522, majf=0, minf=24
+  IO depths    : 1=0.5%, 2=1.3%, 4=5.5%, 8=62.9%, 16=29.9%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=94.3%, 8=3.6%, 16=2.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=148224001,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=965MiB/s (1012MB/s), 965MiB/s-965MiB/s (1012MB/s-1012MB/s), io=565GiB (607GB), run=600014-600014msec
+Running fio /home/athornton/src/bench-2021-01-12/04-b256k-fio-read-posixaio-150M.fio
+file4: (g=0): rw=read, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+
+file4: (groupid=0, jobs=1): err= 0: pid=901: Tue Jan 12 18:18:10 2021
+  read: IOPS=4691, BW=1173MiB/s (1230MB/s)(687GiB/600004msec)
+    slat (nsec): min=71, max=9452.1k, avg=612.51, stdev=9035.88
+    clat (usec): min=16, max=39360, avg=3344.03, stdev=3716.57
+     lat (usec): min=80, max=39361, avg=3344.65, stdev=3716.54
+    clat percentiles (usec):
+     |  1.00th=[  791],  5.00th=[  914], 10.00th=[  988], 20.00th=[ 1156],
+     | 30.00th=[ 1369], 40.00th=[ 1598], 50.00th=[ 1860], 60.00th=[ 2147],
+     | 70.00th=[ 2507], 80.00th=[ 3916], 90.00th=[ 9241], 95.00th=[12780],
+     | 99.00th=[15795], 99.50th=[16909], 99.90th=[20841], 99.95th=[22414],
+     | 99.99th=[24773]
+   bw (  MiB/s): min=  815, max= 1529, per=100.00%, avg=1173.51, stdev=77.89, samples=1199
+   iops        : min= 3262, max= 6116, avg=4694.03, stdev=311.55, samples=1199
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=0.03%
+  lat (usec)   : 750=0.56%, 1000=10.57%
+  lat (msec)   : 2=44.10%, 4=24.94%, 10=11.26%, 20=8.43%, 50=0.12%
+  cpu          : usr=1.46%, sys=14.77%, ctx=1406045, majf=0, minf=23
+  IO depths    : 1=0.1%, 2=0.3%, 4=1.3%, 8=52.3%, 16=46.1%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=95.5%, 8=3.5%, 16=1.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=2815201,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=1173MiB/s (1230MB/s), 1173MiB/s-1173MiB/s (1230MB/s-1230MB/s), io=687GiB (738GB), run=600004-600004msec
+Running fio /home/athornton/src/bench-2021-01-12/05-b256k-fio-read-posixaio-600M.fio
+file5: (g=0): rw=read, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file5: Laying out IO file (1 file / 600MiB)
+
+file5: (groupid=0, jobs=1): err= 0: pid=911: Tue Jan 12 18:28:13 2021
+  read: IOPS=4680, BW=1170MiB/s (1227MB/s)(686GiB/600001msec)
+    slat (nsec): min=72, max=4948.4k, avg=585.54, stdev=7952.40
+    clat (usec): min=6, max=100176, avg=3342.50, stdev=5429.30
+     lat (usec): min=80, max=100176, avg=3343.09, stdev=5429.27
+    clat percentiles (usec):
+     |  1.00th=[  775],  5.00th=[  914], 10.00th=[ 1012], 20.00th=[ 1188],
+     | 30.00th=[ 1385], 40.00th=[ 1582], 50.00th=[ 1795], 60.00th=[ 2024],
+     | 70.00th=[ 2311], 80.00th=[ 2868], 90.00th=[ 9241], 95.00th=[11994],
+     | 99.00th=[15401], 99.50th=[57410], 99.90th=[61604], 99.95th=[67634],
+     | 99.99th=[82314]
+   bw (  MiB/s): min=  815, max= 1538, per=100.00%, avg=1170.75, stdev=83.04, samples=1199
+   iops        : min= 3261, max= 6152, avg=4682.95, stdev=332.15, samples=1199
+  lat (usec)   : 10=0.01%, 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%
+  lat (usec)   : 500=0.03%, 750=0.67%, 1000=8.45%
+  lat (msec)   : 2=49.81%, 4=24.88%, 10=7.69%, 20=7.91%, 50=0.01%
+  lat (msec)   : 100=0.55%, 250=0.01%
+  cpu          : usr=1.45%, sys=14.72%, ctx=1449381, majf=0, minf=24
+  IO depths    : 1=0.1%, 2=0.2%, 4=0.8%, 8=51.8%, 16=47.2%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=95.7%, 8=3.0%, 16=1.3%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=2808573,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=1170MiB/s (1227MB/s), 1170MiB/s-1170MiB/s (1227MB/s-1227MB/s), io=686GiB (736GB), run=600001-600001msec
+Running fio /home/athornton/src/bench-2021-01-12/06-b256k-fio-read-posixaio-1G.fio
+file6: (g=0): rw=read, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file6: Laying out IO file (1 file / 1024MiB)
+
+file6: (groupid=0, jobs=1): err= 0: pid=921: Tue Jan 12 18:38:18 2021
+  read: IOPS=4757, BW=1189MiB/s (1247MB/s)(697GiB/600002msec)
+    slat (nsec): min=74, max=8486.8k, avg=589.20, stdev=9865.86
+    clat (usec): min=3, max=167175, avg=3287.46, stdev=6522.12
+     lat (usec): min=65, max=167175, avg=3288.05, stdev=6522.10
+    clat percentiles (usec):
+     |  1.00th=[   758],  5.00th=[   881], 10.00th=[   979], 20.00th=[  1156],
+     | 30.00th=[  1352], 40.00th=[  1532], 50.00th=[  1745], 60.00th=[  1958],
+     | 70.00th=[  2212], 80.00th=[  2737], 90.00th=[  9110], 95.00th=[ 11863],
+     | 99.00th=[ 14746], 99.50th=[ 16319], 99.90th=[100140], 99.95th=[103285],
+     | 99.99th=[129500]
+   bw (  MiB/s): min=  716, max= 1687, per=100.00%, avg=1189.77, stdev=151.13, samples=1199
+   iops        : min= 2865, max= 6748, avg=4759.03, stdev=604.54, samples=1199
+  lat (usec)   : 4=0.01%, 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%
+  lat (usec)   : 500=0.04%, 750=0.88%, 1000=10.31%
+  lat (msec)   : 2=50.28%, 4=22.90%, 10=7.24%, 20=8.02%, 50=0.01%
+  lat (msec)   : 100=0.21%, 250=0.11%
+  cpu          : usr=1.51%, sys=14.71%, ctx=1478817, majf=0, minf=25
+  IO depths    : 1=0.1%, 2=0.2%, 4=0.7%, 8=51.8%, 16=47.3%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=95.8%, 8=3.1%, 16=1.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=2854556,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=1189MiB/s (1247MB/s), 1189MiB/s-1189MiB/s (1247MB/s-1247MB/s), io=697GiB (748GB), run=600002-600002msec
+Running fio /home/athornton/src/bench-2021-01-12/07-b4k-fio-write-posixaio-15K.fio
+file7: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file7: Laying out IO file (1 file / 0MiB)
+
+file7: (groupid=0, jobs=1): err= 0: pid=931: Tue Jan 12 18:48:18 2021
+  write: IOPS=1081, BW=4324KiB/s (4428kB/s)(2533MiB/599816msec); 0 zone resets
+    slat (nsec): min=93, max=1166.2k, avg=3647.75, stdev=6124.69
+    clat (nsec): min=1174, max=10370k, avg=45447.56, stdev=70842.61
+     lat (usec): min=11, max=10390, avg=49.10, stdev=71.22
+    clat percentiles (usec):
+     |  1.00th=[   26],  5.00th=[   30], 10.00th=[   33], 20.00th=[   35],
+     | 30.00th=[   37], 40.00th=[   39], 50.00th=[   41], 60.00th=[   43],
+     | 70.00th=[   45], 80.00th=[   48], 90.00th=[   57], 95.00th=[   69],
+     | 99.00th=[  133], 99.50th=[  151], 99.90th=[  474], 99.95th=[  898],
+     | 99.99th=[ 3523]
+   bw (  KiB/s): min= 3264, max= 4944, per=100.00%, avg=4324.22, stdev=253.92, samples=1199
+   iops        : min=  816, max= 1236, avg=1081.05, stdev=63.48, samples=1199
+  lat (usec)   : 2=0.01%, 20=0.04%, 50=84.28%, 100=12.99%, 250=2.51%
+  lat (usec)   : 500=0.08%, 750=0.03%, 1000=0.02%
+  lat (msec)   : 2=0.03%, 4=0.01%, 10=0.01%, 20=0.01%
+  cpu          : usr=1.12%, sys=4.11%, ctx=1156032, majf=0, minf=22
+  IO depths    : 1=33.3%, 2=66.7%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,648429,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=4324KiB/s (4428kB/s), 4324KiB/s-4324KiB/s (4428kB/s-4428kB/s), io=2533MiB (2656MB), run=599816-599816msec
+Running fio /home/athornton/src/bench-2021-01-12/08-b4k-fio-write-posixaio-150K.fio
+file8: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file8: Laying out IO file (1 file / 0MiB)
+
+file8: (groupid=0, jobs=1): err= 0: pid=1002: Tue Jan 12 18:58:18 2021
+  write: IOPS=8320, BW=32.5MiB/s (34.1MB/s)(19.0GiB/599867msec); 0 zone resets
+    slat (nsec): min=95, max=493316, avg=721.21, stdev=2247.08
+    clat (nsec): min=1390, max=8072.8k, avg=89313.17, stdev=67231.89
+     lat (usec): min=3, max=8073, avg=90.03, stdev=67.07
+    clat percentiles (usec):
+     |  1.00th=[   29],  5.00th=[   38], 10.00th=[   43], 20.00th=[   51],
+     | 30.00th=[   59], 40.00th=[   68], 50.00th=[   77], 60.00th=[   89],
+     | 70.00th=[  105], 80.00th=[  125], 90.00th=[  151], 95.00th=[  176],
+     | 99.00th=[  225], 99.50th=[  245], 99.90th=[  449], 99.95th=[  783],
+     | 99.99th=[ 2704]
+   bw (  KiB/s): min=24984, max=37592, per=100.00%, avg=33283.46, stdev=1534.66, samples=1199
+   iops        : min= 6246, max= 9398, avg=8320.86, stdev=383.67, samples=1199
+  lat (usec)   : 2=0.01%, 4=0.01%, 10=0.04%, 20=0.15%, 50=18.35%
+  lat (usec)   : 100=48.65%, 250=32.36%, 500=0.35%, 750=0.03%, 1000=0.02%
+  lat (msec)   : 2=0.02%, 4=0.01%, 10=0.01%
+  cpu          : usr=2.34%, sys=5.46%, ctx=2456624, majf=0, minf=23
+  IO depths    : 1=2.7%, 2=5.5%, 4=11.8%, 8=54.5%, 16=25.5%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=94.6%, 8=2.5%, 16=2.9%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,4991374,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=32.5MiB/s (34.1MB/s), 32.5MiB/s-32.5MiB/s (34.1MB/s-34.1MB/s), io=19.0GiB (20.4GB), run=599867-599867msec
+Running fio /home/athornton/src/bench-2021-01-12/09-b256k-fio-write-posixaio-15M.fio
+file9: (g=0): rw=write, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file9: Laying out IO file (1 file / 15MiB)
+
+file9: (groupid=0, jobs=1): err= 0: pid=1012: Tue Jan 12 19:08:19 2021
+  write: IOPS=1540, BW=385MiB/s (404MB/s)(226GiB/600012msec); 0 zone resets
+    slat (nsec): min=1407, max=2086.2k, avg=11324.95, stdev=8943.69
+    clat (usec): min=116, max=747940, avg=10259.98, stdev=16446.41
+     lat (usec): min=133, max=747963, avg=10271.30, stdev=16446.86
+    clat percentiles (usec):
+     |  1.00th=[  367],  5.00th=[ 1254], 10.00th=[ 1614], 20.00th=[ 1713],
+     | 30.00th=[ 1811], 40.00th=[ 2089], 50.00th=[ 3589], 60.00th=[ 4490],
+     | 70.00th=[ 7046], 80.00th=[ 8979], 90.00th=[44827], 95.00th=[51119],
+     | 99.00th=[61604], 99.50th=[66323], 99.90th=[73925], 99.95th=[78119],
+     | 99.99th=[90702]
+   bw (  KiB/s): min=90112, max=494080, per=100.00%, avg=394437.68, stdev=34949.87, samples=1199
+   iops        : min=  352, max= 1930, avg=1540.76, stdev=136.52, samples=1199
+  lat (usec)   : 250=0.54%, 500=0.57%, 750=0.05%, 1000=0.35%
+  lat (msec)   : 2=36.84%, 4=16.60%, 10=26.38%, 20=4.58%, 50=8.31%
+  lat (msec)   : 100=5.78%, 250=0.01%, 750=0.01%
+  cpu          : usr=2.12%, sys=8.91%, ctx=361031, majf=0, minf=25
+  IO depths    : 1=0.1%, 2=1.0%, 4=3.9%, 8=55.1%, 16=40.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=94.8%, 8=4.0%, 16=1.2%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,924248,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=385MiB/s (404MB/s), 385MiB/s-385MiB/s (404MB/s-404MB/s), io=226GiB (242GB), run=600012-600012msec
+Running fio /home/athornton/src/bench-2021-01-12/10-b4k-fio-write-posixaio-150M.fio
+file10: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file10: Laying out IO file (1 file / 150MiB)
+
+file10: (groupid=0, jobs=1): err= 0: pid=1020: Tue Jan 12 19:18:19 2021
+  write: IOPS=122k, BW=477MiB/s (500MB/s)(280GiB/600024msec); 0 zone resets
+    slat (nsec): min=81, max=5743.4k, avg=424.64, stdev=1838.91
+    clat (nsec): min=328, max=465621k, avg=125329.46, stdev=2807227.77
+     lat (usec): min=2, max=465621, avg=125.75, stdev=2807.23
+    clat percentiles (usec):
+     |  1.00th=[    17],  5.00th=[    29], 10.00th=[    34], 20.00th=[    40],
+     | 30.00th=[    43], 40.00th=[    46], 50.00th=[    50], 60.00th=[    54],
+     | 70.00th=[    59], 80.00th=[    66], 90.00th=[    79], 95.00th=[    95],
+     | 99.00th=[   306], 99.50th=[   529], 99.90th=[  2737], 99.95th=[ 34341],
+     | 99.99th=[125305]
+   bw (  KiB/s): min=48312, max=774552, per=100.00%, avg=488880.54, stdev=99894.58, samples=1199
+   iops        : min=12078, max=193638, avg=122220.14, stdev=24973.65, samples=1199
+  lat (nsec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (usec)   : 2=0.01%, 4=0.01%, 10=0.45%, 20=0.94%, 50=49.60%
+  lat (usec)   : 100=44.72%, 250=3.11%, 500=0.62%, 750=0.31%, 1000=0.09%
+  lat (msec)   : 2=0.05%, 4=0.01%, 10=0.01%, 20=0.01%, 50=0.03%
+  lat (msec)   : 100=0.01%, 250=0.04%, 500=0.01%
+  cpu          : usr=16.17%, sys=22.80%, ctx=10691326, majf=0, minf=25
+  IO depths    : 1=0.2%, 2=0.6%, 4=2.8%, 8=60.8%, 16=35.7%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=95.2%, 8=3.6%, 16=1.2%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,73305601,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=477MiB/s (500MB/s), 477MiB/s-477MiB/s (500MB/s-500MB/s), io=280GiB (300GB), run=600024-600024msec
+Running fio /home/athornton/src/bench-2021-01-12/11-b256k-fio-write-posixaio-150M.fio
+file11: (g=0): rw=write, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+
+file11: (groupid=0, jobs=1): err= 0: pid=1028: Tue Jan 12 19:28:20 2021
+  write: IOPS=2576, BW=644MiB/s (675MB/s)(377GiB/600193msec); 0 zone resets
+    slat (nsec): min=1213, max=8184.9k, avg=9553.74, stdev=11905.20
+    clat (usec): min=2, max=442810, avg=6079.11, stdev=22876.26
+     lat (usec): min=122, max=442821, avg=6088.67, stdev=22876.91
+    clat percentiles (usec):
+     |  1.00th=[  1352],  5.00th=[  1582], 10.00th=[  1631], 20.00th=[  1713],
+     | 30.00th=[  1795], 40.00th=[  1876], 50.00th=[  2008], 60.00th=[  2180],
+     | 70.00th=[  2540], 80.00th=[  3392], 90.00th=[  3851], 95.00th=[  7046],
+     | 99.00th=[120062], 99.50th=[208667], 99.90th=[244319], 99.95th=[261096],
+     | 99.99th=[320865]
+   bw (  KiB/s): min=127488, max=1001984, per=100.00%, avg=659733.99, stdev=85072.56, samples=1200
+   iops        : min=  498, max= 3914, avg=2577.07, stdev=332.32, samples=1200
+  lat (usec)   : 4=0.01%, 20=0.01%, 250=0.03%, 500=0.10%, 750=0.01%
+  lat (usec)   : 1000=0.06%
+  lat (msec)   : 2=49.47%, 4=41.74%, 10=3.96%, 20=0.48%, 50=2.15%
+  lat (msec)   : 100=0.21%, 250=1.71%, 500=0.08%
+  cpu          : usr=3.05%, sys=16.21%, ctx=759562, majf=0, minf=26
+  IO depths    : 1=0.1%, 2=0.3%, 4=0.8%, 8=51.1%, 16=47.8%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=94.9%, 8=3.5%, 16=1.6%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,1546212,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=644MiB/s (675MB/s), 644MiB/s-644MiB/s (675MB/s-675MB/s), io=377GiB (405GB), run=600193-600193msec
+Running fio /home/athornton/src/bench-2021-01-12/12-b256k-fio-write-posixaio-600M.fio
+file12: (g=0): rw=write, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file12: Laying out IO file (1 file / 600MiB)
+
+file12: (groupid=0, jobs=1): err= 0: pid=1036: Tue Jan 12 19:38:22 2021
+  write: IOPS=2378, BW=595MiB/s (623MB/s)(349GiB/601508msec); 0 zone resets
+    slat (nsec): min=1388, max=3128.3k, avg=10105.40, stdev=9436.50
+    clat (usec): min=14, max=4899.8k, avg=6527.19, stdev=45886.22
+     lat (usec): min=139, max=4899.8k, avg=6537.30, stdev=45886.57
+    clat percentiles (usec):
+     |  1.00th=[   1516],  5.00th=[   1647], 10.00th=[   1696],
+     | 20.00th=[   1762], 30.00th=[   1844], 40.00th=[   1942],
+     | 50.00th=[   2147], 60.00th=[   2507], 70.00th=[   3326],
+     | 80.00th=[   3752], 90.00th=[   5211], 95.00th=[   6456],
+     | 99.00th=[ 119014], 99.50th=[ 367002], 99.90th=[ 708838],
+     | 99.95th=[ 859833], 99.99th=[1082131]
+   bw (  KiB/s): min=  512, max=1495552, per=100.00%, avg=633568.27, stdev=427167.77, samples=1156
+   iops        : min=    2, max= 5842, avg=2474.86, stdev=1668.63, samples=1156
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%, 500=0.03%
+  lat (usec)   : 750=0.01%, 1000=0.03%
+  lat (msec)   : 2=43.67%, 4=38.19%, 10=16.50%, 20=0.39%, 50=0.13%
+  lat (msec)   : 100=0.02%, 250=0.45%, 500=0.35%, 750=0.13%, 1000=0.07%
+  lat (msec)   : 2000=0.01%, >=2000=0.01%
+  cpu          : usr=3.01%, sys=14.44%, ctx=761647, majf=0, minf=25
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.3%, 8=50.5%, 16=49.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=95.6%, 8=3.2%, 16=1.2%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,1430414,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=595MiB/s (623MB/s), 595MiB/s-595MiB/s (623MB/s-623MB/s), io=349GiB (375GB), run=601508-601508msec
+Running fio /home/athornton/src/bench-2021-01-12/13-b256k-fio-write-posixaio-1G.fio
+file13: (g=0): rw=write, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file13: Laying out IO file (1 file / 1024MiB)
+
+file13: (groupid=0, jobs=1): err= 0: pid=1044: Tue Jan 12 19:48:23 2021
+  write: IOPS=2607, BW=652MiB/s (684MB/s)(382GiB/600706msec); 0 zone resets
+    slat (nsec): min=1273, max=2778.0k, avg=9413.02, stdev=8793.10
+    clat (usec): min=118, max=3250.3k, avg=5954.28, stdev=52434.67
+     lat (usec): min=136, max=3250.3k, avg=5963.70, stdev=52434.94
+    clat percentiles (usec):
+     |  1.00th=[   1401],  5.00th=[   1598], 10.00th=[   1647],
+     | 20.00th=[   1729], 30.00th=[   1811], 40.00th=[   1926],
+     | 50.00th=[   2147], 60.00th=[   2442], 70.00th=[   3261],
+     | 80.00th=[   3425], 90.00th=[   4178], 95.00th=[   5604],
+     | 99.00th=[  10945], 99.50th=[ 206570], 99.90th=[ 868221],
+     | 99.95th=[1233126], 99.99th=[1518339]
+   bw (  KiB/s): min=  512, max=2093056, per=100.00%, avg=798018.85, stdev=526151.85, samples=1005
+   iops        : min=    2, max= 8176, avg=3117.24, stdev=2055.28, samples=1005
+  lat (usec)   : 250=0.01%, 500=0.02%, 750=0.01%, 1000=0.04%
+  lat (msec)   : 2=44.33%, 4=44.56%, 10=9.97%, 20=0.37%, 50=0.09%
+  lat (msec)   : 100=0.02%, 250=0.26%, 500=0.05%, 750=0.11%, 1000=0.10%
+  lat (msec)   : 2000=0.07%, >=2000=0.01%
+  cpu          : usr=3.07%, sys=14.97%, ctx=791763, majf=0, minf=24
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.3%, 8=50.5%, 16=49.1%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=95.8%, 8=3.2%, 16=1.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,1566356,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=652MiB/s (684MB/s), 652MiB/s-652MiB/s (684MB/s-684MB/s), io=382GiB (411GB), run=600706-600706msec
+Running fio /home/athornton/src/bench-2021-01-12/14-b4k-fio-randread-posixaio-15K.fio
+file14: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file14: Laying out IO file (1 file / 0MiB)
+
+file14: (groupid=0, jobs=1): err= 0: pid=1052: Tue Jan 12 19:58:23 2021
+  read: IOPS=28.1k, BW=110MiB/s (115MB/s)(64.3GiB/600001msec)
+    slat (nsec): min=70, max=2042.4k, avg=717.36, stdev=2090.24
+    clat (usec): min=3, max=16900, avg=532.40, stdev=236.86
+     lat (usec): min=6, max=16901, avg=533.12, stdev=236.47
+    clat percentiles (usec):
+     |  1.00th=[   32],  5.00th=[   56], 10.00th=[  392], 20.00th=[  445],
+     | 30.00th=[  478], 40.00th=[  506], 50.00th=[  529], 60.00th=[  562],
+     | 70.00th=[  594], 80.00th=[  635], 90.00th=[  717], 95.00th=[  816],
+     | 99.00th=[ 1172], 99.50th=[ 1352], 99.90th=[ 2212], 99.95th=[ 3097],
+     | 99.99th=[ 6652]
+   bw (  KiB/s): min=81896, max=134120, per=100.00%, avg=112321.30, stdev=8457.81, samples=1199
+   iops        : min=20474, max=33530, avg=28080.32, stdev=2114.46, samples=1199
+  lat (usec)   : 4=0.01%, 10=0.01%, 20=0.01%, 50=4.00%, 100=3.77%
+  lat (usec)   : 250=0.62%, 500=30.07%, 750=53.87%, 1000=5.72%
+  lat (msec)   : 2=1.84%, 4=0.09%, 10=0.03%, 20=0.01%
+  cpu          : usr=4.97%, sys=7.72%, ctx=3100923, majf=0, minf=24
+  IO depths    : 1=2.4%, 2=5.3%, 4=15.9%, 8=64.1%, 16=12.3%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=92.7%, 8=2.3%, 16=5.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=16844263,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=110MiB/s (115MB/s), 110MiB/s-110MiB/s (115MB/s-115MB/s), io=64.3GiB (68.0GB), run=600001-600001msec
+Running fio /home/athornton/src/bench-2021-01-12/15-b4k-fio-randread-posixaio-150K.fio
+file15: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file15: Laying out IO file (1 file / 0MiB)
+
+file15: (groupid=0, jobs=1): err= 0: pid=1060: Tue Jan 12 20:08:23 2021
+  read: IOPS=7044, BW=27.5MiB/s (28.9MB/s)(16.1GiB/600002msec)
+    slat (nsec): min=77, max=592864, avg=434.51, stdev=1049.47
+    clat (usec): min=7, max=18893, avg=2261.44, stdev=630.07
+     lat (usec): min=10, max=18894, avg=2261.87, stdev=630.10
+    clat percentiles (usec):
+     |  1.00th=[ 1106],  5.00th=[ 1401], 10.00th=[ 1565], 20.00th=[ 1762],
+     | 30.00th=[ 1926], 40.00th=[ 2073], 50.00th=[ 2212], 60.00th=[ 2343],
+     | 70.00th=[ 2507], 80.00th=[ 2704], 90.00th=[ 2999], 95.00th=[ 3261],
+     | 99.00th=[ 3949], 99.50th=[ 4359], 99.90th=[ 6718], 99.95th=[ 8586],
+     | 99.99th=[12387]
+   bw (  KiB/s): min=19888, max=37104, per=100.00%, avg=28186.07, stdev=2232.78, samples=1199
+   iops        : min= 4972, max= 9276, avg=7046.51, stdev=558.20, samples=1199
+  lat (usec)   : 10=0.01%, 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%
+  lat (usec)   : 500=0.01%, 750=0.08%, 1000=0.43%
+  lat (msec)   : 2=34.18%, 4=64.39%, 10=0.88%, 20=0.03%
+  cpu          : usr=3.17%, sys=3.51%, ctx=1918287, majf=0, minf=21
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=57.5%, 16=42.4%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=96.5%, 8=3.3%, 16=0.2%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=4226657,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=27.5MiB/s (28.9MB/s), 27.5MiB/s-27.5MiB/s (28.9MB/s-28.9MB/s), io=16.1GiB (17.3GB), run=600002-600002msec
+Running fio /home/athornton/src/bench-2021-01-12/16-b256k-fio-randread-posixaio-15M.fio
+file16: (g=0): rw=randread, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file16: Laying out IO file (1 file / 15MiB)
+
+file16: (groupid=0, jobs=1): err= 0: pid=1068: Tue Jan 12 20:18:24 2021
+  read: IOPS=1866, BW=467MiB/s (489MB/s)(273GiB/600009msec)
+    slat (nsec): min=76, max=568243, avg=598.84, stdev=1204.51
+    clat (usec): min=609, max=37413, avg=8513.09, stdev=1196.41
+     lat (usec): min=620, max=37414, avg=8513.69, stdev=1196.40
+    clat percentiles (usec):
+     |  1.00th=[ 6063],  5.00th=[ 6718], 10.00th=[ 7111], 20.00th=[ 7570],
+     | 30.00th=[ 7898], 40.00th=[ 8160], 50.00th=[ 8455], 60.00th=[ 8717],
+     | 70.00th=[ 8979], 80.00th=[ 9372], 90.00th=[ 9896], 95.00th=[10421],
+     | 99.00th=[11731], 99.50th=[12649], 99.90th=[16188], 99.95th=[17433],
+     | 99.99th=[20579]
+   bw (  KiB/s): min=366080, max=548352, per=100.00%, avg=478001.09, stdev=24674.23, samples=1199
+   iops        : min= 1430, max= 2142, avg=1867.14, stdev=96.39, samples=1199
+  lat (usec)   : 750=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=91.01%, 20=8.97%, 50=0.01%
+  cpu          : usr=0.82%, sys=6.42%, ctx=569313, majf=0, minf=22
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=50.4%, 16=49.6%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=97.2%, 8=2.5%, 16=0.3%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=1120041,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=467MiB/s (489MB/s), 467MiB/s-467MiB/s (489MB/s-489MB/s), io=273GiB (294GB), run=600009-600009msec
+Running fio /home/athornton/src/bench-2021-01-12/17-b4k-fio-randread-posixaio-150M.fio
+file17: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file17: Laying out IO file (1 file / 150MiB)
+
+file17: (groupid=0, jobs=1): err= 0: pid=1076: Tue Jan 12 20:28:24 2021
+  read: IOPS=5299, BW=20.7MiB/s (21.7MB/s)(12.1GiB/600005msec)
+    slat (nsec): min=75, max=226662, avg=454.21, stdev=984.70
+    clat (usec): min=381, max=32648, avg=3012.25, stdev=618.53
+     lat (usec): min=395, max=32649, avg=3012.70, stdev=618.55
+    clat percentiles (usec):
+     |  1.00th=[ 2245],  5.00th=[ 2409], 10.00th=[ 2474], 20.00th=[ 2606],
+     | 30.00th=[ 2704], 40.00th=[ 2802], 50.00th=[ 2933], 60.00th=[ 3032],
+     | 70.00th=[ 3163], 80.00th=[ 3326], 90.00th=[ 3621], 95.00th=[ 3851],
+     | 99.00th=[ 4555], 99.50th=[ 5080], 99.90th=[ 9110], 99.95th=[12256],
+     | 99.99th=[19530]
+   bw (  KiB/s): min=14160, max=25344, per=100.00%, avg=21205.03, stdev=1594.52, samples=1199
+   iops        : min= 3540, max= 6336, avg=5301.26, stdev=398.63, samples=1199
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.06%, 4=96.51%, 10=3.36%, 20=0.07%, 50=0.01%
+  cpu          : usr=2.91%, sys=2.26%, ctx=1616445, majf=0, minf=22
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=50.1%, 16=49.9%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=95.8%, 8=3.2%, 16=1.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=3179917,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=20.7MiB/s (21.7MB/s), 20.7MiB/s-20.7MiB/s (21.7MB/s-21.7MB/s), io=12.1GiB (13.0GB), run=600005-600005msec
+Running fio /home/athornton/src/bench-2021-01-12/18-b256k-fio-randread-posixaio-150M.fio
+file18: (g=0): rw=randread, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+
+file18: (groupid=0, jobs=1): err= 0: pid=1084: Tue Jan 12 20:38:25 2021
+  read: IOPS=1586, BW=397MiB/s (416MB/s)(232GiB/600015msec)
+    slat (nsec): min=77, max=1002.7k, avg=645.68, stdev=1709.50
+    clat (usec): min=778, max=68422, avg=10018.38, stdev=2118.67
+     lat (usec): min=791, max=68422, avg=10019.02, stdev=2118.61
+    clat percentiles (usec):
+     |  1.00th=[ 6456],  5.00th=[ 8291], 10.00th=[ 8717], 20.00th=[ 9110],
+     | 30.00th=[ 9372], 40.00th=[ 9503], 50.00th=[ 9765], 60.00th=[10028],
+     | 70.00th=[10290], 80.00th=[10552], 90.00th=[11076], 95.00th=[11863],
+     | 99.00th=[22152], 99.50th=[24249], 99.90th=[27132], 99.95th=[28967],
+     | 99.99th=[32900]
+   bw (  KiB/s): min=309248, max=474624, per=100.00%, avg=406404.93, stdev=25285.18, samples=1199
+   iops        : min= 1208, max= 1854, avg=1587.51, stdev=98.78, samples=1199
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.32%, 4=0.01%, 10=60.03%, 20=38.26%, 50=1.38%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=0.72%, sys=5.61%, ctx=467110, majf=0, minf=21
+  IO depths    : 1=0.1%, 2=0.2%, 4=0.7%, 8=50.7%, 16=48.5%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=95.7%, 8=4.1%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=952201,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=397MiB/s (416MB/s), 397MiB/s-397MiB/s (416MB/s-416MB/s), io=232GiB (250GB), run=600015-600015msec
+Running fio /home/athornton/src/bench-2021-01-12/19-b256k-fio-randread-posixaio-600M.fio
+file19: (g=0): rw=randread, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file19: Laying out IO file (1 file / 600MiB)
+
+file19: (groupid=0, jobs=1): err= 0: pid=1092: Tue Jan 12 20:48:27 2021
+  read: IOPS=1569, BW=392MiB/s (411MB/s)(230GiB/600011msec)
+    slat (nsec): min=73, max=321981, avg=662.02, stdev=1165.99
+    clat (usec): min=751, max=102270, avg=10120.40, stdev=4254.15
+     lat (usec): min=766, max=102271, avg=10121.06, stdev=4254.15
+    clat percentiles (usec):
+     |  1.00th=[ 7832],  5.00th=[ 8455], 10.00th=[ 8717], 20.00th=[ 9110],
+     | 30.00th=[ 9372], 40.00th=[ 9503], 50.00th=[ 9765], 60.00th=[10028],
+     | 70.00th=[10159], 80.00th=[10421], 90.00th=[10945], 95.00th=[11338],
+     | 99.00th=[14353], 99.50th=[60556], 99.90th=[66323], 99.95th=[70779],
+     | 99.99th=[88605]
+   bw (  KiB/s): min=204800, max=482304, per=100.00%, avg=401872.75, stdev=32702.62, samples=1199
+   iops        : min=  800, max= 1884, avg=1569.80, stdev=127.74, samples=1199
+  lat (usec)   : 1000=0.02%
+  lat (msec)   : 2=0.02%, 4=0.03%, 10=60.81%, 20=38.53%, 50=0.03%
+  lat (msec)   : 100=0.56%, 250=0.01%
+  cpu          : usr=0.78%, sys=5.17%, ctx=472103, majf=0, minf=21
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=50.1%, 16=49.7%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=95.6%, 8=2.2%, 16=2.3%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=941567,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=392MiB/s (411MB/s), 392MiB/s-392MiB/s (411MB/s-411MB/s), io=230GiB (247GB), run=600011-600011msec
+Running fio /home/athornton/src/bench-2021-01-12/20-b256k-fio-randread-posixaio-1G.fio
+file20: (g=0): rw=randread, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file20: Laying out IO file (1 file / 1024MiB)
+
+file20: (groupid=0, jobs=1): err= 0: pid=1100: Tue Jan 12 20:58:30 2021
+  read: IOPS=1569, BW=392MiB/s (411MB/s)(230GiB/600006msec)
+    slat (nsec): min=76, max=689760, avg=633.26, stdev=1217.86
+    clat (usec): min=777, max=160214, avg=10130.47, stdev=5635.28
+     lat (usec): min=793, max=160215, avg=10131.10, stdev=5635.28
+    clat percentiles (msec):
+     |  1.00th=[    8],  5.00th=[    9], 10.00th=[    9], 20.00th=[   10],
+     | 30.00th=[   10], 40.00th=[   10], 50.00th=[   10], 60.00th=[   11],
+     | 70.00th=[   11], 80.00th=[   11], 90.00th=[   11], 95.00th=[   12],
+     | 99.00th=[   14], 99.50th=[   16], 99.90th=[  107], 99.95th=[  109],
+     | 99.99th=[  128]
+   bw (  KiB/s): min=282624, max=487936, per=100.00%, avg=401823.13, stdev=36729.65, samples=1199
+   iops        : min= 1104, max= 1906, avg=1569.61, stdev=143.48, samples=1199
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.02%, 10=60.97%, 20=38.64%, 50=0.01%
+  lat (msec)   : 100=0.01%, 250=0.32%
+  cpu          : usr=0.74%, sys=5.09%, ctx=472766, majf=0, minf=23
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=50.1%, 16=49.8%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=95.6%, 8=2.4%, 16=2.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=941522,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=392MiB/s (411MB/s), 392MiB/s-392MiB/s (411MB/s-411MB/s), io=230GiB (247GB), run=600006-600006msec
+Running fio /home/athornton/src/bench-2021-01-12/21-b4k-fio-randwrite-posixaio-15K.fio
+file21: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file21: Laying out IO file (1 file / 0MiB)
+
+file21: (groupid=0, jobs=1): err= 0: pid=1108: Tue Jan 12 21:08:31 2021
+  write: IOPS=5742, BW=22.4MiB/s (23.5MB/s)(13.1GiB/600002msec); 0 zone resets
+    slat (nsec): min=83, max=1335.3k, avg=954.09, stdev=3119.38
+    clat (usec): min=17, max=20190, avg=2720.58, stdev=523.51
+     lat (usec): min=19, max=20194, avg=2721.53, stdev=523.23
+    clat percentiles (usec):
+     |  1.00th=[   88],  5.00th=[ 2311], 10.00th=[ 2409], 20.00th=[ 2507],
+     | 30.00th=[ 2573], 40.00th=[ 2638], 50.00th=[ 2671], 60.00th=[ 2737],
+     | 70.00th=[ 2835], 80.00th=[ 2933], 90.00th=[ 3097], 95.00th=[ 3326],
+     | 99.00th=[ 4228], 99.50th=[ 5211], 99.90th=[ 6783], 99.95th=[ 7963],
+     | 99.99th=[10814]
+   bw (  KiB/s): min=17376, max=26616, per=100.00%, avg=22975.72, stdev=1371.36, samples=1199
+   iops        : min= 4344, max= 6654, avg=5743.92, stdev=342.84, samples=1199
+  lat (usec)   : 20=0.01%, 50=0.28%, 100=0.85%, 250=0.14%, 500=0.11%
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.10%, 4=97.23%, 10=1.25%, 20=0.02%, 50=0.01%
+  cpu          : usr=1.17%, sys=1.79%, ctx=402669, majf=0, minf=22
+  IO depths    : 1=5.2%, 2=10.9%, 4=23.7%, 8=52.4%, 16=7.8%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=93.9%, 8=0.4%, 16=5.7%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,3445498,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=22.4MiB/s (23.5MB/s), 22.4MiB/s-22.4MiB/s (23.5MB/s-23.5MB/s), io=13.1GiB (14.1GB), run=600002-600002msec
+Running fio /home/athornton/src/bench-2021-01-12/22-b4k-fio-randwrite-posixaio-150K.fio
+file22: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file22: Laying out IO file (1 file / 0MiB)
+
+file22: (groupid=0, jobs=1): err= 0: pid=1116: Tue Jan 12 21:18:31 2021
+  write: IOPS=8721, BW=34.1MiB/s (35.7MB/s)(19.0GiB/600004msec); 0 zone resets
+    slat (nsec): min=81, max=596471, avg=697.04, stdev=2244.87
+    clat (nsec): min=703, max=19373k, avg=1812888.73, stdev=2005674.57
+     lat (usec): min=3, max=19377, avg=1813.59, stdev=2005.63
+    clat percentiles (usec):
+     |  1.00th=[   10],  5.00th=[   25], 10.00th=[   37], 20.00th=[   59],
+     | 30.00th=[  104], 40.00th=[  133], 50.00th=[  194], 60.00th=[ 3195],
+     | 70.00th=[ 3621], 80.00th=[ 3884], 90.00th=[ 4555], 95.00th=[ 5080],
+     | 99.00th=[ 5735], 99.50th=[ 6063], 99.90th=[ 7373], 99.95th=[ 8356],
+     | 99.99th=[11600]
+   bw (  KiB/s): min=26048, max=38480, per=100.00%, avg=34895.25, stdev=1727.70, samples=1199
+   iops        : min= 6512, max= 9620, avg=8723.81, stdev=431.92, samples=1199
+  lat (nsec)   : 750=0.01%
+  lat (usec)   : 2=0.01%, 4=0.01%, 10=1.28%, 20=2.71%, 50=12.94%
+  lat (usec)   : 100=11.71%, 250=22.31%, 500=2.87%, 750=3.10%, 1000=0.14%
+  lat (msec)   : 2=0.09%, 4=26.25%, 10=16.57%, 20=0.02%
+  cpu          : usr=1.53%, sys=2.45%, ctx=589703, majf=0, minf=24
+  IO depths    : 1=0.3%, 2=2.3%, 4=11.5%, 8=67.6%, 16=18.3%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=92.5%, 8=3.6%, 16=3.9%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,5232672,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=34.1MiB/s (35.7MB/s), 34.1MiB/s-34.1MiB/s (35.7MB/s-35.7MB/s), io=19.0GiB (21.4GB), run=600004-600004msec
+Running fio /home/athornton/src/bench-2021-01-12/23-b256k-fio-randwrite-posixaio-15M.fio
+file23: (g=0): rw=randwrite, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file23: Laying out IO file (1 file / 15MiB)
+
+file23: (groupid=0, jobs=1): err= 0: pid=1124: Tue Jan 12 21:28:31 2021
+  write: IOPS=1238, BW=310MiB/s (325MB/s)(181GiB/600035msec); 0 zone resets
+    slat (nsec): min=1450, max=1304.9k, avg=11274.21, stdev=7567.78
+    clat (usec): min=102, max=340026, avg=12779.68, stdev=14482.38
+     lat (usec): min=118, max=340036, avg=12790.96, stdev=14482.29
+    clat percentiles (usec):
+     |  1.00th=[ 1614],  5.00th=[ 1729], 10.00th=[ 1795], 20.00th=[ 1893],
+     | 30.00th=[ 2040], 40.00th=[ 3785], 50.00th=[ 4686], 60.00th=[ 6849],
+     | 70.00th=[17957], 80.00th=[26608], 90.00th=[35390], 95.00th=[41681],
+     | 99.00th=[55313], 99.50th=[58459], 99.90th=[64226], 99.95th=[70779],
+     | 99.99th=[79168]
+   bw (  KiB/s): min=200704, max=377344, per=100.00%, avg=317180.96, stdev=21389.50, samples=1199
+   iops        : min=  784, max= 1474, avg=1238.97, stdev=83.55, samples=1199
+  lat (usec)   : 250=0.20%, 500=0.06%, 750=0.03%, 1000=0.04%
+  lat (msec)   : 2=27.67%, 4=14.98%, 10=20.83%, 20=6.82%, 50=27.29%
+  lat (msec)   : 100=2.08%, 250=0.01%, 500=0.01%
+  cpu          : usr=1.76%, sys=7.79%, ctx=290884, majf=0, minf=23
+  IO depths    : 1=0.1%, 2=1.7%, 4=4.5%, 8=54.4%, 16=39.4%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=94.9%, 8=2.2%, 16=2.9%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,743236,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=310MiB/s (325MB/s), 310MiB/s-310MiB/s (325MB/s-325MB/s), io=181GiB (195GB), run=600035-600035msec
+Running fio /home/athornton/src/bench-2021-01-12/24-b4k-fio-randwrite-posixaio-150M.fio
+file24: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file24: Laying out IO file (1 file / 150MiB)
+
+file24: (groupid=0, jobs=1): err= 0: pid=1132: Tue Jan 12 21:38:32 2021
+  write: IOPS=81.8k, BW=320MiB/s (335MB/s)(187GiB/600113msec); 0 zone resets
+    slat (nsec): min=91, max=6957.0k, avg=364.52, stdev=1435.69
+    clat (nsec): min=362, max=455897k, avg=190627.94, stdev=4291296.41
+     lat (usec): min=3, max=455897, avg=190.99, stdev=4291.32
+    clat percentiles (usec):
+     |  1.00th=[    28],  5.00th=[    38], 10.00th=[    42], 20.00th=[    46],
+     | 30.00th=[    48], 40.00th=[    51], 50.00th=[    53], 60.00th=[    56],
+     | 70.00th=[    60], 80.00th=[    64], 90.00th=[    73], 95.00th=[    81],
+     | 99.00th=[   112], 99.50th=[   149], 99.90th=[ 36963], 99.95th=[135267],
+     | 99.99th=[166724]
+   bw (  KiB/s): min=  784, max=503360, per=100.00%, avg=327457.75, stdev=52478.53, samples=1199
+   iops        : min=  196, max=125840, avg=81864.48, stdev=13119.68, samples=1199
+  lat (nsec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (usec)   : 2=0.01%, 4=0.01%, 10=0.07%, 20=0.23%, 50=38.58%
+  lat (usec)   : 100=59.59%, 250=1.17%, 500=0.08%, 750=0.04%, 1000=0.03%
+  lat (msec)   : 2=0.03%, 4=0.02%, 10=0.02%, 20=0.01%, 50=0.04%
+  lat (msec)   : 100=0.01%, 250=0.07%, 500=0.01%
+  cpu          : usr=11.83%, sys=16.56%, ctx=8803673, majf=0, minf=25
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.7%, 8=57.5%, 16=41.6%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=96.2%, 8=3.3%, 16=0.4%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,49113733,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=320MiB/s (335MB/s), 320MiB/s-320MiB/s (335MB/s-335MB/s), io=187GiB (201GB), run=600113-600113msec
+Running fio /home/athornton/src/bench-2021-01-12/25-b256k-fio-randwrite-posixaio-150M.fio
+file25: (g=0): rw=randwrite, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+
+file25: (groupid=0, jobs=1): err= 0: pid=1140: Tue Jan 12 21:48:32 2021
+  write: IOPS=1580, BW=395MiB/s (414MB/s)(232GiB/600062msec); 0 zone resets
+    slat (nsec): min=1327, max=6587.4k, avg=9731.94, stdev=12114.81
+    clat (usec): min=2, max=782198, avg=9967.90, stdev=33021.67
+     lat (usec): min=148, max=782216, avg=9977.64, stdev=33023.23
+    clat percentiles (usec):
+     |  1.00th=[  1647],  5.00th=[  1696], 10.00th=[  1713], 20.00th=[  1745],
+     | 30.00th=[  1778], 40.00th=[  1795], 50.00th=[  1827], 60.00th=[  1860],
+     | 70.00th=[  1893], 80.00th=[  1975], 90.00th=[  2606], 95.00th=[ 60556],
+     | 99.00th=[154141], 99.50th=[185598], 99.90th=[295699], 99.95th=[320865],
+     | 99.99th=[358613]
+   bw (  KiB/s): min=77824, max=618496, per=100.00%, avg=404844.44, stdev=111855.65, samples=1199
+   iops        : min=  304, max= 2416, avg=1581.40, stdev=436.94, samples=1199
+  lat (usec)   : 4=0.01%, 250=0.01%, 500=0.04%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=82.38%, 4=8.57%, 10=0.87%, 20=0.43%, 50=2.63%
+  lat (msec)   : 100=0.47%, 250=4.32%, 500=0.27%, 750=0.01%, 1000=0.01%
+  cpu          : usr=2.00%, sys=10.11%, ctx=461730, majf=0, minf=23
+  IO depths    : 1=0.1%, 2=0.2%, 4=0.8%, 8=50.8%, 16=48.1%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=95.7%, 8=3.7%, 16=0.7%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,948682,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=395MiB/s (414MB/s), 395MiB/s-395MiB/s (414MB/s-414MB/s), io=232GiB (249GB), run=600062-600062msec
+Running fio /home/athornton/src/bench-2021-01-12/26-b256k-fio-randwrite-posixaio-600M.fio
+file26: (g=0): rw=randwrite, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file26: Laying out IO file (1 file / 600MiB)
+
+file26: (groupid=0, jobs=1): err= 0: pid=1148: Tue Jan 12 21:58:33 2021
+  write: IOPS=1551, BW=388MiB/s (407MB/s)(227GiB/600319msec); 0 zone resets
+    slat (nsec): min=1358, max=8960.9k, avg=8651.83, stdev=11304.34
+    clat (usec): min=127, max=1430.4k, avg=10113.57, stdev=66141.70
+     lat (usec): min=132, max=1430.4k, avg=10122.22, stdev=66142.56
+    clat percentiles (usec):
+     |  1.00th=[   1647],  5.00th=[   1713], 10.00th=[   1729],
+     | 20.00th=[   1762], 30.00th=[   1778], 40.00th=[   1811],
+     | 50.00th=[   1827], 60.00th=[   1844], 70.00th=[   1876],
+     | 80.00th=[   1926], 90.00th=[   2008], 95.00th=[   2311],
+     | 99.00th=[ 513803], 99.50th=[ 566232], 99.90th=[ 717226],
+     | 99.95th=[ 809501], 99.99th=[1132463]
+   bw (  KiB/s): min=  512, max=1228800, per=100.00%, avg=428017.85, stdev=469650.89, samples=1114
+   iops        : min=    2, max= 4800, avg=1671.93, stdev=1834.58, samples=1114
+  lat (usec)   : 250=0.01%, 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=89.09%, 4=8.01%, 10=0.42%, 20=0.22%, 50=0.25%
+  lat (msec)   : 100=0.12%, 250=0.59%, 500=0.21%, 750=0.99%, 1000=0.05%
+  lat (msec)   : 2000=0.02%
+  cpu          : usr=1.72%, sys=9.48%, ctx=513287, majf=0, minf=23
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.3%, 8=50.3%, 16=49.4%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=95.5%, 8=2.7%, 16=1.9%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,931241,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=388MiB/s (407MB/s), 388MiB/s-388MiB/s (407MB/s-407MB/s), io=227GiB (244GB), run=600319-600319msec
+Running fio /home/athornton/src/bench-2021-01-12/27-b256k-fio-randwrite-posixaio-1G.fio
+file27: (g=0): rw=randwrite, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=posixaio, iodepth=16
+fio-3.25-28-g8f14-dirty
+Starting 1 process
+file27: Laying out IO file (1 file / 1024MiB)
+
+file27: (groupid=0, jobs=1): err= 0: pid=1156: Tue Jan 12 22:08:33 2021
+  write: IOPS=1644, BW=411MiB/s (431MB/s)(241GiB/600260msec); 0 zone resets
+    slat (nsec): min=1356, max=2104.9k, avg=8800.88, stdev=6548.65
+    clat (usec): min=126, max=1990.1k, avg=9501.55, stdev=79960.42
+     lat (usec): min=133, max=1990.1k, avg=9510.35, stdev=79961.01
+    clat percentiles (usec):
+     |  1.00th=[   1647],  5.00th=[   1713], 10.00th=[   1729],
+     | 20.00th=[   1762], 30.00th=[   1778], 40.00th=[   1795],
+     | 50.00th=[   1827], 60.00th=[   1844], 70.00th=[   1876],
+     | 80.00th=[   1909], 90.00th=[   1991], 95.00th=[   2147],
+     | 99.00th=[ 212861], 99.50th=[ 817890], 99.90th=[1002439],
+     | 99.95th=[1035994], 99.99th=[1803551]
+   bw (  KiB/s): min=  512, max=2092544, per=100.00%, avg=566663.95, stdev=659724.37, samples=892
+   iops        : min=    2, max= 8174, avg=2213.51, stdev=2577.04, samples=892
+  lat (usec)   : 250=0.01%, 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=90.45%, 4=7.69%, 10=0.29%, 20=0.15%, 50=0.17%
+  lat (msec)   : 100=0.11%, 250=0.33%, 500=0.05%, 750=0.14%, 1000=0.50%
+  lat (msec)   : 2000=0.10%
+  cpu          : usr=1.88%, sys=10.02%, ctx=493850, majf=0, minf=23
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.2%, 8=50.2%, 16=49.5%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=95.7%, 8=2.4%, 16=1.9%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,987164,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=411MiB/s (431MB/s), 411MiB/s-411MiB/s (431MB/s-431MB/s), io=241GiB (259GB), run=600260-600260msec
